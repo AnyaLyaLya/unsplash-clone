@@ -1,4 +1,4 @@
-# [Unsplash clone]('https://anyalyalya.github.io/unsplash-clone/') 
+# [Unsplash clone]('https://anyalyalya.github.io/unsplash-clone') 
 
 ## Description
 

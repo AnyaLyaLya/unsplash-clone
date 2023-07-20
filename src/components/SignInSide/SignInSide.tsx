@@ -192,6 +192,11 @@ const SignInSide = () => {
                 )}
                 label="Remember me"
               />
+              {error !== '' && (
+                <Typography component="text" variant="body1" color='red'>
+                  {error}
+              </Typography>
+              )}
               <Button
                 type="submit"
                 fullWidth
