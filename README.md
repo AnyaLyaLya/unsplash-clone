@@ -1,4 +1,4 @@
-# Unsplash clone
+# [Unsplash clone]('https://anyalyalya.github.io/unsplash-clone/') 
 
 ## Description
 
@@ -24,3 +24,6 @@ This project is a simple web gallery that serves as a mini Unsplash clone. It al
 - React.js
 - SCSS
 - HTML5
+- JSX
+- React Router
+- Material UI
