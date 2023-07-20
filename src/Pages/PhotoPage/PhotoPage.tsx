@@ -10,6 +10,7 @@ export const PhotoPage = () => {
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
   const { setSearchQuery } = useAppContext();
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const loadPhoto = async () => {
     try {
       const photoFromServer = await getPhoto(pathname);
@@ -23,7 +24,7 @@ export const PhotoPage = () => {
 
   useEffect(() => {
     loadPhoto();
-  }, [pathname]);
+  }, [loadPhoto, pathname]);
   
   return (
 

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './header.scss';
+import logo from '../../img/logo.svg';
 import { SearchInput } from '../SearchInput';
 import { useAppContext } from '../../contexts/AppContext';
 import { Avatar } from '@mui/material';
@@ -14,7 +15,7 @@ export const Header = () => {
           <Link to='/'>
             <img 
               className='header__logo'
-              src="/favicon.ico" 
+              src={logo}
               alt="Logo"
             />
           </Link>

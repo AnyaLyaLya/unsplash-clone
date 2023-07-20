@@ -41,7 +41,7 @@ export const GallaryStrip: FC<Props> = ({ photos }) => {
   };
   
 
-  const spacing = screen === Screen.MOBILE ? 1 : (screen === Screen.TABLET ? 2 : 3);
+  const spacing = screen === Screen.MOBILE ? 1 : (screen === Screen.TABLET ? 1.5 : 2);
 
   return (
     <div className={`gallery-strip`}>
