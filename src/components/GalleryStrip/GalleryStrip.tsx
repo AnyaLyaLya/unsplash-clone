@@ -29,12 +29,17 @@ export const GallaryStrip: FC<Props> = ({ photos }) => {
   };
 
   const handleAddToFavorites = (photo: Photo) => {
-    if (!favoritePhotos.includes(photo)) {
-      setFavoritePhotos((prevFavorites: Photo[]) => prevFavorites.filter(item => item.id !== photo.id) as Photo[]);
+    let updatedFavorites: Photo[];
+  
+    if (!favoritePhotos.some(item => item.id === photo.id)) {
+      updatedFavorites = favoritePhotos.filter(item => item.id !== photo.id);
+      updatedFavorites.push(photo);
     } else {
-      setFavoritePhotos((prevFavorites: Photo[]) => [...prevFavorites, photo] as Photo[]);
+      updatedFavorites = favoritePhotos.filter(item => item.id !== photo.id);
     }
+    setFavoritePhotos(updatedFavorites);
   };
+  
 
   const spacing = screen === Screen.MOBILE ? 1 : (screen === Screen.TABLET ? 2 : 3);
 
