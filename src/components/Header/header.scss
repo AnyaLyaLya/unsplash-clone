@@ -1,0 +1,40 @@
+@import '../../styles/vars';
+
+.container {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 20px;
+  height: 62px;
+  background-color: #fff;
+
+  &__logo {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 12px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $secondary-color;
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}

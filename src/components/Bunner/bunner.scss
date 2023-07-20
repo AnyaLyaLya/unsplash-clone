@@ -1,0 +1,41 @@
+@import '../../styles/mixins';
+
+.bunner {
+  background-size: cover;
+
+  @include size(100%, calc(100vh - 62px), url(https://source.unsplash.com/random?wallpapers));
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 250px;
+    margin: 0 auto;
+
+    align-items: center; 
+    justify-content: center; 
+    height: 100%; 
+
+    @include onTablet {
+      max-width: 500px;
+    }
+
+    @include onDesktop {
+      max-width: 800px;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+
+  &__subtitle {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+}

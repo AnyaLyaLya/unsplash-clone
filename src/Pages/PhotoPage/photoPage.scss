@@ -1,0 +1,226 @@
+@import '../../styles/mixins';
+@import '../../styles/vars';
+
+$indent-size: 20px;
+
+.photo {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    
+    @include onDesktop {
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+
+  &__description {
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: capitalize;
+  }
+
+  &__img-box {
+    padding: 12px;
+  }
+
+  &__img {
+    width: 100%;
+    height: calc(100vh - 62px);
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.container-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 319px;
+  height: 100vh;
+  margin: $indent-size auto;
+
+  @include onTablet {
+    max-width: 640px;
+  }
+
+  @include onDesktop {
+    max-width: 1200px;
+  }
+
+  &__user {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__img {
+    margin-top: $indent-size;
+    height: 60%;
+    width: 100%;
+
+    @include onTablet {
+      width: 50%;
+    }
+  }
+}
+
+.img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  background-color: #fff;
+  padding: 5px;
+  top: 70px;
+
+  width: 100%;
+
+  &__link {
+    text-decoration: none;
+    color: $primary-color;
+
+    &:visited {
+      color: $primary-color;
+    }
+  }
+
+  &__photo {
+    border: 1px solid $secondary-color;
+    border-radius: 50%;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+  }
+
+  &__name {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  &__username {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 700;
+  }
+}
+
+.button {
+  height: 32px;
+  width: 100px;
+  padding: 4px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #fff;
+  border: 1px solid $secondary-color;
+  border-radius: 25px;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+
+  &__link {
+    color: $secondary-color;
+    text-decoration: none;
+
+    &:visited {
+      color: $secondary-color;
+    }
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.bottom {
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    margin-top: $indent-size;
+
+    &_stats {
+      display: flex;
+    }
+
+    &_download {
+      margin-right: 10px;
+
+      @include onTablet {
+        margin-right: 50px;
+      }
+    }
+  }
+
+  &__views {
+    margin-right: 10px;
+
+    @include onTablet {
+      margin-right: 50px;
+    }
+  }
+
+  &__title {
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: $secondary-color;
+  }
+
+  &__number {
+    margin-top: 4px;
+    padding: 0;
+
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 15px;
+    color: $primary-color;
+  }
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: $indent-size;
+
+  &__link {
+    margin: 4px;
+    color: $primary-color;
+    background-color: #eee;
+    border-radius: 2px;
+    font-size: 14px;
+    padding: 8px;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    &:hover {
+      background-color: #bebebe;
+    }
+  }
+}

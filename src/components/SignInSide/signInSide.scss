@@ -1,0 +1,17 @@
+#text {
+  color: #313237;
+  text-align: center;
+
+  &-link {
+    text-align: end;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12px;
+    color: #313237;
+  }
+}
+
+#email::placeholder {
+  font-size: 14px;
+}
+

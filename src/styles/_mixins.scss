@@ -1,0 +1,30 @@
+@mixin text(
+  $font-size, 
+  $line-height, 
+  $color, 
+  $font-weight: 400,
+) {
+  font-style: normal;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin size($width, $height, $background) { 
+  width: $width;
+  height: $height;
+  background-image: $background;
+}
+
+@mixin onTablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
